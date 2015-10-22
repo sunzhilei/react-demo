@@ -1,0 +1,21 @@
+工程目录介绍
+
+.idea 文件夹是使用 webstorm 工具的配置文件（如果你使用其他工具，可以将其删除）
+
+react-and-bs-demo 是react配置bootstrap实现的一个弹出框组件
+
+react-bootstrap-demo 是基于react的react-bootstrap组件的使用实现
+
+
+PS:关于更多react框架 与 react-bootstrap 组件集合可到github上去了解
+
+
+
+技术知识范围
+
+NPM        构建和管理依赖模块
+
+Browserify 按照依赖（这里使用CommonJS规范）编译和生成为Javascript文件的工具
+PS:这里使用Browserify的transform转换reactify模块实现对JSX语言的编译
+
+
