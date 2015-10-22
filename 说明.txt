@@ -2,16 +2,23 @@
 
 .idea 文件夹是使用 webstorm 工具的配置文件（如果你使用其他工具，可以将其删除）
 
-react-and-bs-demo 是react配置bootstrap实现的一个弹出框组件
+react-and-bs-demo 是react配合bootstrap实现的一个弹出框组件（其他bs组件也可按照此规范实现，编写自己的组件模块）
 
-react-bootstrap-demo 是基于react的react-bootstrap组件的使用实现
-
-
-PS:关于更多react框架 与 react-bootstrap 组件集合可到github上去了解
+react-bootstrap-demo 是基于react的react-bootstrap组件库（基本涵盖bootstrap所有组件）的使用实现
 
 
+PS:关于更多react框架 与 react-bootstrap 组件库可到github上去了解
 
-技术知识范围
+
+
+需要了解的知识
+
+reactjs框架
+git地址：https://github.com/facebook/react.git
+
+react-bootstrap组件库
+git地址：https://github.com/react-bootstrap/react-bootstrap.git
+官网：http://react-bootstrap.github.io/
 
 NPM        构建和管理依赖模块
 
