@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<title>React-Demo 官网</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" />
+
+	<!--自定义-->
+	<link rel="stylesheet" href="css/example.css" type="text/css" />
+
+	<!--react-bootstrap组件需要的环境 - CND服务-->
+	<!--<script src="https://cdn.bootcss.com/react/0.14.0/react.js"></script>-->
+	<!--<script src="https://cdn.bootcss.com/react/0.14.0/react-dom.js"></script>-->
+	<!--<script src="https://cdn.bootcss.com/react-bootstrap/0.27.1/react-bootstrap.js"></script>-->
+
+	<!--Babel是一个源代码到源代码的转换器，支持<script type="text/babel"></script>标签-->
+	<!--<script src="node_modules/babel/node_modules/babel-core/browser.min.js"></script>-->
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<header id="header"></header>
+<div id="sub_header"></div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+<!--Browserify 可以让你使用类似于 node 的 require() 的方式来组织浏览器端的 Javascript 代码-->
+<!--通过预编译让前端 Javascript 可以直接使用 Node NPM 安装的一些库-->
+<!--bundel.js就是通过dos命令到project目录执行browserify -t reactify js/app.js -o build/bundle.js获得的依赖模块的集合文件-->
+<script src="build/bundle.js"></script>
+</body>
+</html>

@@ -94,35 +94,88 @@ process.umask = function() { return 0; };
 },{}],2:[function(require,module,exports){
 var React = require('react');
 var ReactDOM = require('react-dom');
-var ButtonToolbar = require('react-bootstrap').ButtonToolbar;
-var Button = require('react-bootstrap').Button;
 
-const buttonsInstance = (
-    React.createElement(ButtonToolbar, null, 
-        /* Standard button */
-        React.createElement(Button, null, "Default"), 
+/* navbarInstance 开始 */
+var Navbar = require('react-bootstrap').Navbar;
 
-        /* Provides extra visual weight and identifies the primary action in a set of buttons */
-        React.createElement(Button, {bsStyle: "primary"}, "Primary"), 
+var NavBrand = require('react-bootstrap').NavBrand;
 
-        /* Indicates a successful or positive action */
-        React.createElement(Button, {bsStyle: "success"}, "Success"), 
+var Nav = require('react-bootstrap').Nav;
+var NavItem = require('react-bootstrap').NavItem;
 
-        /* Contextual button for informational alert messages */
-        React.createElement(Button, {bsStyle: "info"}, "Info"), 
+var NavDropdown = require('react-bootstrap').NavDropdown;
+var MenuItem = require('react-bootstrap').MenuItem;
 
-        /* Indicates caution should be taken with this action */
-        React.createElement(Button, {bsStyle: "warning"}, "Warning"), 
-
-        /* Indicates a dangerous or potentially negative action */
-        React.createElement(Button, {bsStyle: "danger"}, "Danger"), 
-
-        /* Deemphasize a button by making it look like a link while maintaining button behavior */
-        React.createElement(Button, {bsStyle: "link"}, "Link")
+const navbarInstance = (
+    React.createElement(Navbar, {inverse: true, toggleNavKey: 0}, 
+        React.createElement(NavBrand, null, "React-Demo 官网"), 
+        React.createElement(Nav, {right: true, eventKey: 0}, " ", /* This is the eventKey referenced */
+            React.createElement(NavItem, {eventKey: 1, href: "#"}, "介绍"), 
+            React.createElement(NavItem, {eventKey: 2, href: "#"}, "开始"), 
+            React.createElement(NavItem, {eventKey: 3, href: "#"}, "组件"), 
+            React.createElement(NavItem, {eventKey: 4, href: "#"}, "支持"), 
+            React.createElement(NavDropdown, {eventKey: 5, title: "GitHUB", id: "collapsible-navbar-dropdown"}, 
+                React.createElement(MenuItem, {eventKey: "1"}, "react-demo github"), 
+                React.createElement(MenuItem, {divider: true}), 
+                React.createElement(MenuItem, {eventKey: "2"}, "react github"), 
+                React.createElement(MenuItem, {eventKey: "3"}, "react-bootstrap github"), 
+                React.createElement(MenuItem, {eventKey: "4"}, "react-bootstrap document")
+            )
+        )
     )
 );
 
-ReactDOM.render(buttonsInstance, document.getElementById('content'));
+ReactDOM.render(navbarInstance, document.getElementById('header'));
+/* navbarInstance 结束 */
+
+
+/* thumbnailInstance 开始 */
+var Grid = require('react-bootstrap').Grid;
+var Row = require('react-bootstrap').Row;
+var Col = require('react-bootstrap').Col;
+
+var Thumbnail = require('react-bootstrap').Thumbnail;
+
+var Button = require('react-bootstrap').Button;
+
+const thumbnailInstance = (
+    React.createElement(Grid, null, 
+        React.createElement(Row, null, 
+            React.createElement(Col, {xs: 6, md: 4}, 
+                React.createElement(Thumbnail, {src: "../react-bootstrap-demo/img/logo.png", alt: "242x200"}, 
+                    React.createElement("h3", null, "react"), 
+                    React.createElement("p", null, "React是Facebook开发的一款JS库"), 
+                    React.createElement("p", null, 
+                        React.createElement(Button, {bsStyle: "default"}, "GitHUB")
+                    )
+                )
+            ), 
+            React.createElement(Col, {xs: 6, md: 4}, 
+                React.createElement(Thumbnail, {src: "../react-bootstrap-demo/img/logo.png", alt: "242x200"}, 
+                    React.createElement("h3", null, "react-bootstrap"), 
+                    React.createElement("p", null, "基于react开发的组件库"), 
+                    React.createElement("p", null, 
+                        React.createElement(Button, {bsStyle: "primary"}, "Document"), " ", 
+                        React.createElement(Button, {bsStyle: "default"}, "GitHUB")
+                    )
+                )
+            ), 
+            React.createElement(Col, {xs: 6, md: 4}, 
+                React.createElement(Thumbnail, {src: "../react-bootstrap-demo/img/logo.png", alt: "242x200"}, 
+                    React.createElement("h3", null, "react-demo"), 
+                    React.createElement("p", null, "基于react-bootstrap组件库的开发的网站"), 
+                    React.createElement("p", null, 
+                        React.createElement(Button, {bsStyle: "primary"}, "Demo"), " ", 
+                        React.createElement(Button, {bsStyle: "default"}, "GitHUB")
+                    )
+                )
+            )
+        )
+    )
+);
+
+ReactDOM.render(thumbnailInstance, document.getElementById('sub_header'));
+/* thumbnailInstance 结束 */
 
 },{"react":396,"react-bootstrap":73,"react-dom":241}],3:[function(require,module,exports){
 'use strict';
